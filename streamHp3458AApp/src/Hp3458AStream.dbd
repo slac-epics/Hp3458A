@@ -1,0 +1,18 @@
+# This line includes definitions on all conventional EPICS Base records like ai, ao, calc, ...
+include "base.dbd"
+
+# This line includes the device definitions for StreamDevice and adds the "stream" option to the DTYP fields in any I/O records
+include "stream.dbd"
+
+# This line and the two followings loads the definitions for ASYN which is used by StreamDevice
+include "asyn.dbd"
+
+include "asynRecord.dbd"
+
+include "drvAsynIPPort.dbd"
+
+include "drvVxi11.dbd"
+
+include "drvAsynSerialPort.dbd"
+
+

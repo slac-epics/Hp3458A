@@ -1,0 +1,33 @@
+# Record Configuration 
+
+# DTYP 
+# field (DTYP, "stream")
+
+# Format of INP / OUT link 
+# field (INP, "@file protocol port address")
+# field (OUT, "@file protocol port address")
+#
+# field (INP, "@file protocol(arg) port address")
+# field (OUT, "@file protocol(arg1,arg2,arg3) port address")
+
+# file  - Name of the protocol file. The file is searched in the /cfg directory of the IOC 
+# protocol - Name of the protocol in the file 
+# port - Name of the port as configured in the startup script 
+# address - Address of the device for ports with addresses like GPIB. Optional. 
+# Some protocol require arguments.
+# In this case append arguments to the protocol name in parentheses without spaces: 
+
+record(stringin, "$(sys):$(dev)ID") {
+  field(DESC, "Freq Counter ID String")
+  field(DTYP, "stream") 
+  field(INP, "@Hp3458A.proto.db GET_IDN $(L) $(A)")   
+  field(FLNK, "$(sys):$(dev)Option")
+  field(SDIS,"$(sys):$(dev)Disable  NPP NMS")
+}
+
+record(stringin, "$(sys):$(dev)Option") {
+  field(DESC, "Freq Counter Option String")
+  field(DTYP, "stream")
+  field(INP, "@Hp3458A.proto.db GET_OPT $(L) $(A)")  
+  field(SDIS,"$(sys):$(dev)Disable  NPP NMS")
+}

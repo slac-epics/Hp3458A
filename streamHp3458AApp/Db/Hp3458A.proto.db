@@ -1,0 +1,24 @@
+InTerminator  = CR LF;
+OutTerminator = CR LF;
+ReplyTimeout  =  800;
+ReadTimeout   =  100;
+WriteTimeout  =  100;
+ExtraInput    = Ignore;
+
+# Protocol to get option
+GET_OPT {
+	out "OPT?";
+	in "%s";	
+	wait 20; 
+}
+
+# Protocol to get IDENTITY
+GET_IDN {
+	out "ID?";
+	in "%s";	
+	wait 20; 
+}
+
+
+
+

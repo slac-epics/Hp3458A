@@ -1,0 +1,11 @@
+# Support for GPIB HP3458A Multimeter
+device(ai,        GPIB_IO, devAiHP3458AGpib,   "HP3458A (GPIB)")
+device(ao,        GPIB_IO, devAoHP3458AGpib,   "HP3458A (GPIB)")
+device(bi,        GPIB_IO, devBiHP3458AGpib,   "HP3458A (GPIB)")
+device(bo,        GPIB_IO, devBoHP3458AGpib,   "HP3458A (GPIB)")
+device(longin,    GPIB_IO, devLiHP3458AGpib,   "HP3458A (GPIB)")
+device(mbbi,      GPIB_IO, devMbbiHP3458AGpib, "HP3458A (GPIB)")
+device(mbbo,      GPIB_IO, devMbboHP3458AGpib, "HP3458A (GPIB)")
+device(stringin,  GPIB_IO, devSiHP3458AGpib,   "HP3458A (GPIB)")
+device(stringout, GPIB_IO, devSoHP3458AGpib,   "HP3458A (GPIB)")
+include "asyn.dbd"

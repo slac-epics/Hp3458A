@@ -1,5 +1,8 @@
 Release Notes for the Keysight Hp3458A Multimeter GPIB module
 ---------------------------------------------------------------
+R1.1-0.1.0: lorelli 14-Nov-2024
+    Updated to asyn/R4.39-1.0.2, streamdevice/R2.8.9-1.2.2
+
 R1.1-0.0.1: scondam: 24-Aug-2020
 	First version with the Git Workflow.
 	Imported from https://epics.anl.gov/download/modules/hp3458a_cvs.tar.gz
